@@ -1,4 +1,4 @@
-﻿@model List<Pizza>
+﻿@model List<PizzaViewModel>
 <h2>List of pizzas:</h2>
 <br />
 <div class="card-container">
@@ -7,20 +7,11 @@
 {
     <div>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="@pizza.ImageUrl" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">@pizza.Name</h5>
                 <p class="card-text">@pizza.Price</p>
             </div>
             <br />
-            @if(pizza.IsOnPromotion)
-            {
-                <p class="text-success">On Promotion</p>
-            }
-            else
-            {
-                <p class="card-danger">Not on Promotion</p>
-            }
         </div>
     </div>
 }
